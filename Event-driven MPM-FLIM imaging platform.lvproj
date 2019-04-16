@@ -59,18 +59,18 @@
 			<Item Name="PowerOffCalibration.vi" Type="VI" URL="../PowerOffCalibration.vi"/>
 			<Item Name="ShutterControl.vi" Type="VI" URL="../ShutterControl.vi"/>
 		</Item>
+		<Item Name="FileIO" Type="Folder">
+			<Item Name="CreateFolder.vi" Type="VI" URL="../CreateFolder.vi"/>
+			<Item Name="Save2ColorPNG.vi" Type="VI" URL="../Save2ColorPNG.vi"/>
+			<Item Name="Save2CSV.vi" Type="VI" URL="../Save2CSV.vi"/>
+			<Item Name="Save2RealTIF.vi" Type="VI" URL="../Save2RealTIF.vi"/>
+			<Item Name="Save3DStack.vi" Type="VI" URL="../Save3DStack.vi"/>
+			<Item Name="SaveHSVComb.vi" Type="VI" URL="../SaveHSVComb.vi"/>
+			<Item Name="SaveMatrix.vi" Type="VI" URL="../SaveMatrix.vi"/>
+			<Item Name="SaveOverlap.vi" Type="VI" URL="../SaveOverlap.vi"/>
+			<Item Name="SavePhasor.vi" Type="VI" URL="../SavePhasor.vi"/>
+		</Item>
 		<Item Name="Math" Type="Folder">
-			<Item Name="FileIO" Type="Folder">
-				<Item Name="CreateFolder.vi" Type="VI" URL="../CreateFolder.vi"/>
-				<Item Name="Save2ColorPNG.vi" Type="VI" URL="../Save2ColorPNG.vi"/>
-				<Item Name="Save2CSV.vi" Type="VI" URL="../Save2CSV.vi"/>
-				<Item Name="Save2RealTIF.vi" Type="VI" URL="../Save2RealTIF.vi"/>
-				<Item Name="Save3DStack.vi" Type="VI" URL="../Save3DStack.vi"/>
-				<Item Name="SaveHSVComb.vi" Type="VI" URL="../SaveHSVComb.vi"/>
-				<Item Name="SaveMatrix.vi" Type="VI" URL="../SaveMatrix.vi"/>
-				<Item Name="SaveOverlap.vi" Type="VI" URL="../SaveOverlap.vi"/>
-				<Item Name="SavePhasor.vi" Type="VI" URL="../SavePhasor.vi"/>
-			</Item>
 			<Item Name="Analysis.vi" Type="VI" URL="../Analysis.vi"/>
 			<Item Name="Crop2DMatrix.vi" Type="VI" URL="../Crop2DMatrix.vi"/>
 			<Item Name="Crop3DStack.vi" Type="VI" URL="../Crop3DStack.vi"/>
@@ -79,6 +79,7 @@
 			<Item Name="LifetimeHistogram.vi" Type="VI" URL="../LifetimeHistogram.vi"/>
 			<Item Name="PhaseCalibration.vi" Type="VI" URL="../PhaseCalibration.vi"/>
 			<Item Name="PhaseConversion.vi" Type="VI" URL="../PhaseConversion.vi"/>
+			<Item Name="QuadraticOptimization.vi" Type="VI" URL="../QuadraticOptimization.vi"/>
 			<Item Name="RunningAverage.vi" Type="VI" URL="../RunningAverage.vi"/>
 			<Item Name="ScanXY.vi" Type="VI" URL="../ScanXY.vi"/>
 		</Item>
@@ -188,6 +189,7 @@
 		<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
+				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
 				<Item Name="Calc Long Word Padded Width.vi" Type="VI" URL="/&lt;vilib&gt;/picture/bmp.llb/Calc Long Word Padded Width.vi"/>
 				<Item Name="Check Color Table Size.vi" Type="VI" URL="/&lt;vilib&gt;/picture/jpeg.llb/Check Color Table Size.vi"/>
@@ -446,6 +448,7 @@
 				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
 				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
+				<Item Name="NI_LVConfig.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/config.llb/NI_LVConfig.lvlib"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
 				<Item Name="Not Found Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Not Found Dialog.vi"/>
 				<Item Name="Picture to Pixmap.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pictutil.llb/Picture to Pixmap.vi"/>
@@ -455,6 +458,7 @@
 				<Item Name="Set Pen State.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Set Pen State.vi"/>
 				<Item Name="Set String Value.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set String Value.vi"/>
 				<Item Name="Simple Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Simple Error Handler.vi"/>
+				<Item Name="Space Constant.vi" Type="VI" URL="/&lt;vilib&gt;/dlg_ctls.llb/Space Constant.vi"/>
 				<Item Name="TagReturnType.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/TagReturnType.ctl"/>
 				<Item Name="Three Button Dialog CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog CORE.vi"/>
 				<Item Name="Three Button Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog.vi"/>
