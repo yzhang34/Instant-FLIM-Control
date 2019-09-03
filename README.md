@@ -1,5 +1,5 @@
 # PM-FLIM-Control
-In vivo high-speed, four-dimensional frequency-domain FLIM by phase multiplexing
+In vivo high-speed, long-term, four-dimensional phase multiplexing FLIM in intact brains
 
 
 ## License & Copyright
