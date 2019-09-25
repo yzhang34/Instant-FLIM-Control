@@ -1,5 +1,5 @@
-# PM-FLIM-Control
-In vivo high-speed, long-term, four-dimensional phase multiplexing FLIM in intact brains
+# Instant-FLIM-Control
+An open-source LabView program to control the instant FLIM system
 
 
 ## License & Copyright
