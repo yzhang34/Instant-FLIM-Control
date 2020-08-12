@@ -1,5 +1,5 @@
 # Instant-FLIM-Control
-An open-source LabView program that controls the [instant FLIM](https://www.biorxiv.org/content/10.1101/2020.02.05.936039v1) system.
+An open-source LabView program that controls the [instant FLIM](https://www.biorxiv.org/content/10.1101/2020.02.05.936039v2) system.
 
 ```latex
 @article {InstantFLIM2020,
