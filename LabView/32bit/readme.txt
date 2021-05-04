@@ -1,0 +1,1 @@
+For 32-bit LabVIEW, please replace the file "libctiff.dll" in the "LabView" directory with the one in this folder.
