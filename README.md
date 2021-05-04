@@ -39,59 +39,84 @@ functions or to add new functions.
 
 ![](./media/image3.png)
 
-## 3. Hardware Configuration
+## 3. Hardware Configuration (<span style="color:red">Updated</span>)
 This step is to establish the connection between the LabView software
 and the instant FLIM hardware. Use the pop-up menus in the "I/O" tab to
 configurate the input and output ports.
 
 ![](./media/image5.png)
 
+The current implentation of the program requires <span style="color:red">two NI DAQ cards</span> that support NI-DAQmax. 
+
+- <span style="color:red">Card 1</span>, e.g., NI PCI-6110, should have at least 4 analog input (AI) channels and 2 ananlog output (AO) channels.
+
+- <span style="color:red">Card 2</span>, e.g., NI PCIe-6323, should have at least 1 AI channel and 4 AO channels.
+
+Note:
+
+- <span style="color:red">Card 1</span> and <span style="color:red">Card 2</span> should be synchronized using a Real-Time System Integration (RTSI) bus: <https://www.ni.com/en-us/support/documentation/supplemental/18/real-time-system-integration--rtsi--and-configuration-explained.html>
+
+- For a complete list of devices that support NI-DAQmx, please check: <https://www.ni.com/pdf/manuals/374768ae.html>
+
+- If you do not have cards with 4 AI + 2 AO or 1 AI + 4 AO channels, please contact me at <yzhang34@caltech.edu>. I can provide other versions of the program that would work for your applications. However, you need to make sure that all your cards combined have at least 5 AI channels and 6 AO channels.
+
 The following ports and channels should be configurated before running
 the program:
 
 -   Mixer AI Channel(s)
 
-    -   Configurate 4 analog input (AI) channels of a DAQ card (e.g.,
-        National Instruments DAQ 6110) to read the IF voltages of the
+    -   Configurate 4 AI channels of <span style="color:red">Card 1</span> (e.g.,
+        NI PCI-6110) to read the IF voltages of the
         four mixers in instant FLIM
+
+-   AIStartTrigger
+
+    -   Configurate ai/StartTrigger of <span style="color:red">Card 1</span> (e.g.,
+        NI PCI-6110) to synchronize with <span style="color:red">Card 2</span>
+
+
+-   Scan AO Channel(s)
+
+    -   Configurate 2 AO channels of <span style="color:red">Card 1</span> (e.g., NI PCI-6110) to generate the controlling voltages for
+        the galvo scanners (e.g., Thorlabs GVS002); AO1 and AO2 for fast
+        and slow scanning axes, respectively
+
+-   AOStartTrigger
+
+    -   Configurate ao/StartTrigger of <span style="color:red">Card 1</span> (e.g.,
+        NI PCI-6110) to synchronize with <span style="color:red">Card 2</span>
 
 -   DC AI Channel(s)
 
-    -   Configurate 1 AI channel of a DAQ card (e.g., National
-        Instruments DAQ 6323) to read the DC voltage from the bias tee
+    -   Configurate 1 AI channel of <span style="color:red">Card 2</span> (e.g., NI PCIe-6323) to read the DC voltage from the bias tee
         (i.e., the intensity signal) in instant FLIM
 
 -   Bias AO Channel(s)
 
-    -   Configurate 4 analog output (AO) channels of a DAQ card (e.g.,
-        National Instruments DAQ 6323) to generate the bias voltages for
+    -   Configurate 4 AO channels of <span style="color:red">Card 2</span> (e.g.,
+        NI PCIe-6323) to generate the bias voltages for
         the four phase shifters in instant FLIM
 
--   Scan AO Channel(s)
-
-    -   Configurate 2 AO channels of a DAQ card (e.g., National
-        Instruments DAQ 6110) to generate the controlling voltages for
-        the galvo scanners (e.g., Thorlabs GVS002); AO1 and AO2 for fast
-        and slow scanning axes, respectively
-
--   Stage VISA COM
+-   Stage VISA COM (Optional)
 
     -   Configurate the computer's COM port that connects to the
         motorized stage system (e.g., Prior OptiScan III)
+    -   If not use a stage, uncheck "Use Stage?"
 
 -   DM Resource Name (Optional)
 
     -   Configurate the USB resource name assigned to the deformable
         mirror (e.g., Thorlabs DMP40-P01) used in the optional adaptive
         optics system
+    -   If not use a deformable mirror, uncheck "Use DM?"
 
-In addition, a mechanical shutter (e.g., Thorlabs SHB1T) should be
-controlled by a digital output line of a DAQ card (e.g., National
-Instruments DAQ 6110). By default, the program uses port0:line0 of a DAQ
-6110 card to control the shutter. The user can change the line that
-controls the shutter in the file "ShutterControl.vi":
+-   Shutter Line (Optional)
 
-![](./media/image6.png)
+    -   Configurate the digital output line (e.g., port0/line0) of a DAQ card (e.g., NI PCI-6110) to control a mechanical shutter (e.g., Thorlabs SHB1T)
+
+-   Power Control Direction  (Optional)
+
+    -   Configurate the digital output line (e.g., port0/line0) and the counter (e.g., ctr1) of a DAQ card (e.g., NI PCIe-6323) to control a motor that adjusts the laser power
 
 ## 4. System Calibration
 
