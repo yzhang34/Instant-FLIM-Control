@@ -3,12 +3,17 @@ An open-source LabView program that controls the [instant FLIM](https://www.bior
 
 ```latex
 @article {InstantFLIM2020,
-	author = {Zhang, Yide and Guldner, Ian H. and Nichols, Evan L. and Benirschke, David and Smith, Cody J. and Zhang, Siyuan and Howard, Scott S.},
-	title = {High-speed, long-term, 4D in vivo lifetime imaging in intact and injured zebrafish and mouse brains by instant FLIM},
-	year = {2020},
-	doi = {10.1101/2020.02.05.936039},
-	URL = {https://www.biorxiv.org/content/10.1101/2020.02.05.936039v2},
-	journal = {bioRxiv}
+    author = {Yide Zhang and Ian H. Guldner and Evan L. Nichols and David Benirschke and Cody J. Smith and Siyuan Zhang and Scott S. Howard},
+    journal = {Optica},
+    number = {6},
+    pages = {885--897},
+    publisher = {OSA},
+    title = {Instant FLIM enables 4D in vivo lifetime imaging of intact and injured zebrafish and mouse brains},
+    volume = {8},
+    month = {Jun},
+    year = {2021},
+    url = {http://www.osapublishing.org/optica/abstract.cfm?URI=optica-8-6-885},
+    doi = {10.1364/OPTICA.426870},
 }
 ```
 
